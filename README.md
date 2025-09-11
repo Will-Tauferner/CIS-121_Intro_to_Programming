@@ -1,5 +1,6 @@
 # CIS-121_Intro_to_Programming
 Projects Completed in CIS-121 Labs
+
 Week 3:
 Outcome 3: Create programs utilizing conditional logic.
 standard 3.1 – Apply conditional expressions to control the flow of a simple program.
