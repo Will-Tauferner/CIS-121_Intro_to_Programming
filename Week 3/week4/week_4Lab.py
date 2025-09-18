@@ -33,6 +33,7 @@ for num in range (x, y)
     print(x)
 '''''
 #4 
+''''
 word = ''
 while True:
     #Read the user input
@@ -41,6 +42,14 @@ while True:
     if user_in == 'done':
         break
     else:
+        #Else lets add letter into the word
         word += user_in
-
+#print out the final word
 print(f'The final word is {word}')
+'''
+
+#5 Using a loop, write code to calculate the sum of all odd numbers between 50 and 517. Print the result
+sum = 0 
+for i in range(51, 517, 2):
+    sum += i
+print(sum)
