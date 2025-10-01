@@ -14,18 +14,78 @@ def v_of_pyramid(base, height):
 # you are counting points for a basketball game. Write a function that calculates the final points for
 #the team and returns the value. The arguments for the function will be two pointers (number of
 #two-pointers scored) and three pointers (number of three-pointers scored).
-
+'''
 def total_points(two_pointers, three_pointers):
     total_points = (two_pointers * 2) + (three_pointers * 3)
     return total_points
 print(total_points(2,5))
 
-
+'''
 
 
 #4
+#You are counting points for a tennis match. Write a function that calculates the total points for a
+#player and returns the value. The arguments for the function will be aces (each ace is worth 2 points)
+#1
+#and winning shots (each winning shot is worth 1 point).
+'''
+def counting_point(aces,winning_shot):
+    counting_point = (aces * 2) + (winning_shot * 1)
+    return counting_point
+print(counting_point(4,3))
+      '''
 
 #5
+#Write a function that counts the total number of legs in the farmer’s land and returns the value. The
+#arguments for the function will be chickens (number of chickens farmer has), cows (number of cows
+#farmer has), and pigs (number of pigs farmer has) 
+#Pigs has 4 legs
+#Cow has 4 legs
+#chicken has 2 legs
+'''
+def legCounter(chickens,cows,pigs):
+    legCounter = (chickens * 2) + (cows * 4) + (pigs * 4)
+    return legCounter
+print(f'the amount of legs is:{legCounter(1,2,3)}')
+'''
+#6
+#Write a function that counts the total number of batteries needed for the toy store and returns the
+#value. The arguments for the function will be e dolls (number of electronic dolls toy store has), rc cars
+#(number of remote-controlled cars toy store has), and robo dogs (number of robot dogs toy store has).
+'''
+def battery_counter(edolls,rcCars,robodogs):
+    battery_counter = (edolls * 2) + (rcCars * 4) + (robodogs * 6)
+    return battery_counter
+print(f'the amount of batterys is:{battery_counter(1,2,3)}')
+'''
+
+#7
+#The table below show what your resting heart rate should be based on age and athleticism. Write
+#a function that returns what the resting heart rate of the user should be. The arguments for the
+#function will be age (how old the user is) and athl goal (athletic goal of user)
+
+def resting_heartrate(age,athl_goal):
+    if 20 <= age <= 39:
+        if athl_goal == "Above Average":
+            return('Your heart rate will be 47-72')
+        elif athl_goal == "Below Average":
+            return('Your heart rate will be 73-93')
+    elif 40 <= age <=59:
+        if athl_goal == "Above Average":
+            return('Your heartrate will be 46-71')
+        elif athl_goal == 'Below Average':
+            return('your heartrate will be 72-94')
+    elif 60 <= age <= 79:
+        if athl_goal == "Above Average":
+            return('Your heart rate will be 45-70')
+        elif athl_goal == 'Below Average':
+            return('YOur heart rate will be 71-97')
+    return('age not supported')
+age = int(input('Please select current age'))
+athl_goal = input('Please select what athletic goal you want between Above Average and Below Average')
+
+print(resting_heartrate(age,athl_goal))
+
 
 #8 
 '''
@@ -74,7 +134,8 @@ print(light_color(current_color))
 #admin means full access, user means limited access, and guest means view-only access. Write a function
 #named access rights that takes user role (a string) as an argument and returns the access rights of a
 #user
-
+'''
+'''
 def access_rights(user_role):
     if user_role == 'admin':
         return 'full access'
@@ -82,13 +143,16 @@ def access_rights(user_role):
         return 'limited access'
     elif user_role == 'guest':
         return 'view only access'
-''' 
+print(access_rights('admin'))
+'''
+'''
 #12 
 #In an Ancient Kingdom, the currency consists of bronze coins, silver coins, and gold coins. There are
 #20 bronze coins in one silver coin and 15 silver coins in one gold coin. Write a function that will return
 #a converted amount of bronze coins into the fewest amount of coins possible. Only return a string with
 #the non-zero values, meaning don’t return something similar to “0 silver coins”. The argument for the
 #function will be bronze coins (how many bronze coins to convert)
+'''
 '''
 def convert(bronze_coins):
    gold_coins = bronze_coins // 300 
@@ -99,7 +163,7 @@ def convert(bronze_coins):
        
    if silver_coins > 0:
        '''
-#
+#'''
       
 
 
@@ -177,7 +241,7 @@ print(f'is fever ? {is_fever(user_input)}')
 #Write a function that returns the number of copies of the same number. The arguments for the
 #function will be num 1 (first number), num 2 (second number), and num 3 (third number)
 #count duplicates(2, 3, 2) →” You entered the same number 2 times”
-
+'''
 def count_duplicates(num1, num2, num3):
     if num1 == num2 and num1 == num3:
         output = 3
@@ -192,3 +256,4 @@ def count_duplicates(num1, num2, num3):
     return f'You entered the same number{output}times' 
 
 print(count_duplicates(1,2,1))
+'''
