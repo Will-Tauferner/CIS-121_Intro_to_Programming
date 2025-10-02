@@ -63,7 +63,7 @@ print(f'the amount of batterys is:{battery_counter(1,2,3)}')
 #The table below show what your resting heart rate should be based on age and athleticism. Write
 #a function that returns what the resting heart rate of the user should be. The arguments for the
 #function will be age (how old the user is) and athl goal (athletic goal of user)
-
+'''
 def resting_heartrate(age,athl_goal):
     if 20 <= age <= 39:
         if athl_goal == "Above Average":
@@ -86,7 +86,7 @@ athl_goal = input('Please select what athletic goal you want between Above Avera
 
 print(resting_heartrate(age,athl_goal))
 
-
+'''
 #8 
 '''
 def pool_times(grade, time):
@@ -257,3 +257,32 @@ def count_duplicates(num1, num2, num3):
 
 print(count_duplicates(1,2,1))
 '''
+#17
+#Write a function that checks whether a letter is a vowel or consonant. The function should return
+#” Vowel” if the letter is a vowel and” Consonant” if the letter is a consonant. The argument to the
+#function will be letter (a single lowercase letter).
+#Hint: In the English language, the letters a, e, i, o, and u are the vowels
+'''
+def checkletter(letter):
+    if letter in ('a','e','i','o','u'):
+        return'vowel'
+    else:
+        return'constant'
+print(checkletter('z'))
+'''
+
+#18
+#at the local ice cream store they have 3 flavors, which are Vanilla, Chocolate, and Strawberry. Write
+#a function that returns the selected flavor. If the chosen flavor is not available, let them know. The
+#argument to the function will be selected f lavor (the user’s selected flavor).
+
+def flavor(sel_flavor):
+    if sel_flavor == 'vanilla':
+        return 'Here is your vanilla icecream!'
+    elif sel_flavor == 'chocolate':
+        return 'Here is your chocolate icecream!'
+    elif sel_flavor == 'strawberry':
+        return 'Here is your strawberry icecream!'
+
+sel_flavor = input('Please pick a flavor:vanilla, chocolate, strawberry')
+print(flavor(sel_flavor))
