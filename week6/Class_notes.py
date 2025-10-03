@@ -66,13 +66,20 @@ def string_to_list(words):
     return words
 print(string_to_list(word))
 
+#write a function that takes a string as an argument, and returns ... containing all of the words in that string
+phonebook = {'matt':5073891438, 'Ashley' :12345}
+print(phonebook)
 
-    
+#to add to a dictionary, we use name_of_dicitonary { key } = value
+phonebook['waters'] = 789
+print(phonebook)
 
+#to look up a value in a dictionary, we use name_of_dictionary[ key ]
 
+print(phonebook['matt'])
 
-
-
+for person in phonebook:
+    print(person, phonebook[person])
 
 
 

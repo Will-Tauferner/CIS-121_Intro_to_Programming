@@ -93,6 +93,6 @@ print(x)
 '''
 #lyst.append(element) will add the element to the end of the lyst.
 print(lyst)
-lyst.append(12,3)
+lyst.append(12)
 print(lyst)
 

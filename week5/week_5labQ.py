@@ -1,11 +1,11 @@
 #Written By William Tauferner
 #1
-'''
+
 def v_of_pyramid(base, height):
     volume = (base**2 * height) /3
     return(v_of_pyramid)
-'''
-#print(f'The volume of the pyramid is {v_of_pyramid(3,4)}')
+
+print(f'The volume of the pyramid is {v_of_pyramid(3,4)}')
 
 
 #2
@@ -63,7 +63,7 @@ print(f'the amount of batterys is:{battery_counter(1,2,3)}')
 #The table below show what your resting heart rate should be based on age and athleticism. Write
 #a function that returns what the resting heart rate of the user should be. The arguments for the
 #function will be age (how old the user is) and athl goal (athletic goal of user)
-'''
+
 def resting_heartrate(age,athl_goal):
     if 20 <= age <= 39:
         if athl_goal == "Above Average":
@@ -145,7 +145,6 @@ def access_rights(user_role):
         return 'view only access'
 print(access_rights('admin'))
 '''
-'''
 #12 
 #In an Ancient Kingdom, the currency consists of bronze coins, silver coins, and gold coins. There are
 #20 bronze coins in one silver coin and 15 silver coins in one gold coin. Write a function that will return
@@ -160,16 +159,7 @@ def convert(bronze_coins):
    bronze_coins = bronze_coins
    answer = ''
    if gold_coins > 0:
-       
-   if silver_coins > 0:
-       '''
-#'''
-      
 
-
-
-
-''''
 #11
 def convert_knuts(knuts):
     
@@ -215,24 +205,19 @@ def random_guess(user_guess):
     return output
 print(random_guess('even'))
 
-
+'''
 def is_fever(temperature):
-#How can we extract the F and C ?
     unit = temperature[-1]
-#If it is F > 98.6 is a fever
     if unit == 'F':
-        # '99F' -> '99'
         if temperature > 98.6: 
             return True
         else:
-            return False
-#If it is a C -> 37 is a fever 
+            return False 
     if unit == 'C':
         if temperature > 37:
             return True
         else:
-            return False
-# Input and print shoyld be outside of the function 
+            return False 
 user_input = input('Enter a temperature in F or C ')
 print(f'is fever ? {is_fever(user_input)}')
 '''
@@ -269,7 +254,6 @@ def checkletter(letter):
     else:
         return'constant'
 print(checkletter('z'))
-'''
 
 #18
 #at the local ice cream store they have 3 flavors, which are Vanilla, Chocolate, and Strawberry. Write
@@ -286,3 +270,69 @@ def flavor(sel_flavor):
 
 sel_flavor = input('Please pick a flavor:vanilla, chocolate, strawberry')
 print(flavor(sel_flavor))
+
+
+#19
+
+#STRINGS QUESTIONS
+#1
+#Zyra the code mage has hidden a mysterious cipher in reversed messages. You must help Zyra uncover
+#the secrets of the digital realm. Create a function called reverse string that takes the variable word
+#(a string) and returns the word in reversed order
+
+def reverse_string(word):
+    reversed_word = ""
+    for char in word:
+        reversed_word = char + reversed_word
+    return reversed_word
+
+# Example usage
+message = "sdrawkcab"
+print(reverse_string(message))  # Output: "backwards"
+
+#4
+#Your task: create a function named hamming distance that takes two strings as arguments, and returns
+#the hamming distance between the two strings
+def hamming_distance(str1, str2):
+    # Assume both strings are the same length
+    distance = 0
+    for i in range(len(str1)):
+        if str1[i] != str2[i]:
+            distance += 1
+    return distance
+
+# Examples
+print(hamming_distance("abcde", "bcdef"))   # → 5
+print(hamming_distance("abcdef", "abcdef")) # → 0
+print(hamming_distance("strong", "strung")) # → 1
+
+#5
+def is_isogram(word):
+    for i in range(len(word)):
+        for j in range(i + 1, len(word)):
+            if word[i] == word[j]:
+                return False   # found a duplicate
+    return True  # no duplicates found
+
+# Examples
+print(is_isogram("lamp"))     # → True
+print(is_isogram("letter"))   # → False
+print(is_isogram("strong"))   # → True
+
+#6
+
+#9
+def flip_flop(word):
+    mid = len(word) // 2            # find the midpoint
+    first_half = word[:mid]         # from start to middle
+    second_half = word[mid:]        # from middle to end
+    return second_half + first_half # flip-flop
+
+# Examples
+print(flip_flop("python"))   # → honpyt
+print(flip_flop("banana"))   # → nana ba → nanaba
+print(flip_flop("magic"))    # → icmag
+
+
+
+
