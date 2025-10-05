@@ -45,7 +45,7 @@ print(f'Total Count : {count(deck2)}')
 #odds. The larger group wins.
 #Write a function that takes a list of integers named numbers, sums the even numbers and odd numbers
 #separately, then returns which of the two sums is larger.
-
+'''
 def numWars(numbers):
     even_sum = 0
     odd_sum = 0
@@ -53,14 +53,50 @@ def numWars(numbers):
     for num in numbers:
         if num % 2 == 0:
             even_sum += num
+
         else:
             odd_sum += num
-        if even_sum > odd_sum:
-            return 'Even Numbers is greater!'
-        else:
-            odd_sum > even_sum
-            return 'Odd Numbers is greater!'
-    print(numWars([1,2,4,6,7,8,9,5]))
+    if even_sum > odd_sum:
+        return 'Even Numbers is greater!'
+    elif odd_sum > even_sum:
+        return 'Odd Numbers is greater!'
+    else:
+        return 'Odd Numbers is greater!'
+print(numWars([1,2,4,6,7,8,9,5]))
+print(numWars([2,4,6,8]))
+'''
+#11
+#Write a function named add lists that takes two lists lyst1 and lyst2 and adds the first element in lyst1
+#with the first element in lyst2, the second element lyst1 with the second element lyst2, etc. Return a
+#new list containing the corresponding sums of the list1 and list2. You may assume both lists have the
+#same length
+'''
+def add_lists(lyst1,lyst2):
+    new_list = []
+    for i in range(len(lyst1)):
+        new_list.append (lyst1[i] + lyst2[i])
+    return new_list
+
+
+list1 = [1,2,3,4,5]
+list2 = [10,9,8,7,6]
+print(add_lists(list1,list2))
+'''
+#17
+#Write a function that takes two arguments, a list and an item. The function should return the indices
+#of all occurrences of the item in the list
+
+def integers(list,item):
+    new_list = []
+    for i in range(len(list)):
+        if list[i] == item:
+            new_list.append(i)
+    return new_list
+
+list = [1,2,5,4,5]
+item = 5
+
+print(integers(list,item))
 
 
 
