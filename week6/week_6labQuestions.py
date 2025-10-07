@@ -98,6 +98,64 @@ item = 5
 
 print(integers(list,item))
 
+#18
+# Write a function that takes two numbers as arguments num and length and returns a list of multiples
+#of num until the list length reaches length
+
+def multiples(num,length):
+    new_list = []
+    for i in range(1,length+1):
+        new_list.append(num * i)
+    return new_list
+
+num = 6
+length = 4
+print(multiples(num,length))
+
+#19 
+#Write a function that finds the largest odd number in a list numbers. Return -1 if not found.
+
+def largest_even(list):
+    maxnum = -1
+    for i in range(len(list)):
+        if list[i] % 2 == 0:
+            if list[i] > maxnum:
+                maxnum = list[i]
+    return maxnum
+
+list = [1]
+print(largest_even(list))
+
+#20
+#Write a function that finds the largest odd number in a list numbers. Return -1 if not found
+
+def largest_odd(list):
+    maxnum = -1
+    for i in range(len(list)):
+        if list[i] % 2 == 1:
+            if list[i] > maxnum:
+                maxnum = list[i]
+    return maxnum
+
+list = [0]
+print(largest_odd(list))
+
+
+#My own
+#Compute summation value
+
+def summation(startnum,endNum):
+    total = 0
+    for i in range(startnum,endNum+1):
+        total += i
+    return total
+    
+print(summation(1,6))
+
+
+
+
+
 
 
 
