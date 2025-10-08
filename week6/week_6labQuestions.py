@@ -1,3 +1,53 @@
+#1 
+#Write a function that loops through a word and returns a list with every other letter of the word
+#starting with the first letter. The function will take a single argument word (a string representing the
+#word to process).
+
+def ever_other_letter(word):
+    result = []
+    for i in range(0,len(word),2):
+        result.append(word[i])
+    return result
+print(ever_other_letter('hello this is me'))
+
+#2 
+#Write a function that loops through a word and returns a list with every other letter of the word
+#starting with the second letter. The function will take a single argument word (a string representing
+#the word to process
+
+def every_other_letter(word):
+    result = []
+    for i in range(1,len(word),2):
+        result.append(word[i])
+    return result
+print(every_other_letter('hello'))
+
+#3
+#Write a function that loops through and returns a list with every even number between two integers
+#(inclusive). The arguments to the function will be smaller num and larger num.
+
+def even_num(smallNum,largeNum):
+    evens = []
+    for i in range(smallNum,largeNum +1):
+        if i % 2 == 0:
+            evens.append(i)
+    return evens
+print(even_num(2,10))
+
+#4
+#Write a function that loops through and returns a list with every odd number between two integers
+#(inclusive). The arguments to the function will be smaller num and larger num
+
+def odd_num(smallNum,largeNum):
+    odds = []
+    for i in range(smallNum,largeNum):
+        if i % 2 == 1:
+            odds.append(i)
+    return odds
+print(odd_num(1,10))
+
+
+
 #5
 #Given a positive integer n, the following rules will always create a sequence that ends with 1, called
 #Hailstone Sequence:
@@ -6,7 +56,7 @@
 #(c) Continue until n is 1
 #Write a function that returns a list with the hailstone sequence starting at n. The argument to the
 #function will be n (the integer to start the sequence from).
-'''
+
 def hailstone_seq(n):
     output_list = []
     while n != 1:
@@ -38,14 +88,14 @@ deck2 = ['a',2,3,4]
 deck1 = [5,'j','k']
 print(f'Total Count : {count(deck1)}')
 print(f'Total Count : {count(deck2)}')
-'''
+
 #10
 #There’s a great war between the even and odd numbers. Many numbers already lost their lives in this
 #war and it’s your task to end this. You have to determine which group sums larger: the evens or the
 #odds. The larger group wins.
 #Write a function that takes a list of integers named numbers, sums the even numbers and odd numbers
 #separately, then returns which of the two sums is larger.
-'''
+
 def numWars(numbers):
     even_sum = 0
     odd_sum = 0
@@ -64,13 +114,13 @@ def numWars(numbers):
         return 'Odd Numbers is greater!'
 print(numWars([1,2,4,6,7,8,9,5]))
 print(numWars([2,4,6,8]))
-'''
+
 #11
 #Write a function named add lists that takes two lists lyst1 and lyst2 and adds the first element in lyst1
 #with the first element in lyst2, the second element lyst1 with the second element lyst2, etc. Return a
 #new list containing the corresponding sums of the list1 and list2. You may assume both lists have the
 #same length
-'''
+
 def add_lists(lyst1,lyst2):
     new_list = []
     for i in range(len(lyst1)):
@@ -81,7 +131,7 @@ def add_lists(lyst1,lyst2):
 list1 = [1,2,3,4,5]
 list2 = [10,9,8,7,6]
 print(add_lists(list1,list2))
-'''
+
 #17
 #Write a function that takes two arguments, a list and an item. The function should return the indices
 #of all occurrences of the item in the list
@@ -140,6 +190,8 @@ def largest_odd(list):
 list = [0]
 print(largest_odd(list))
 
+
+#
 
 #My own
 #Compute summation value

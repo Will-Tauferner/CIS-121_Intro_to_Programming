@@ -17,3 +17,30 @@ for letter in letter_dict:
 
 #result...
 #d = {'p:9,'e':???}
+
+
+
+#a function is a data type with 2 operators.
+#1. assignment = 
+#2. invoking ()
+#In python all names defined in a program are organized into namespaces.
+#These are the names avaiable when the program is executed.
+#By default, python loads (_ _builtin_ _) and _ _ main _ _ .
+#When a function is invoked, Python creates a local namespace corresponding to the function itself
+
+
+
+def add_three(x):
+    y = x + 3
+    return y
+
+var0 = 7
+var1 = add_three(var0)
+
+print(add_three)
+
+
+
+
+
+
