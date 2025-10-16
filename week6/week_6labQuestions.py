@@ -70,6 +70,70 @@ def hailstone_seq(n):
 
 print(f'{hailstone_seq(25)}')
 
+#6
+#Write a function that returns a list with the factors of a given integer. The argument of the function
+#will be num (integer to find factors for).
+def factors(num):
+    factors_list = []
+    for i in range(1, num + 1):
+        if num % i == 0:
+            factors_list.append(i)
+    return factors_list
+#7
+#Write a function that takes 3 numbers as arguments, num 1 (first number), num 2 (second number),
+#and num 3 (third number). Return a list of the integers in ascending order. You may not use the
+#built-in functions max (), min(), sort(), or sorted ()
+
+def order_numbers(num1, num2, num3):
+    # Start by assuming num1 is the smallest, middle, and largest
+    if num1 <= num2 and num1 <= num3:
+        smallest = num1
+        if num2 <= num3:
+            middle = num2
+            largest = num3
+        else:
+            middle = num3
+            largest = num2
+    elif num2 <= num1 and num2 <= num3:
+        smallest = num2
+        if num1 <= num3:
+            middle = num1
+            largest = num3
+        else:
+            middle = num3
+            largest = num1
+    else:
+        smallest = num3
+        if num1 <= num2:
+            middle = num1
+            largest = num2
+        else:
+            middle = num2
+            largest = num1
+
+    return [smallest, middle, largest]
+
+#8
+#Write a function that takes 3 numbers as arguments, num 1 (first number), num 2 (second number),
+#and num 3 (third number). Return a list of the integers in descending order. You may not use the
+#built-in functions max (), min(), sort(), or sorted ()
+
+def order_numbers_desc(num1, num2, num3):
+    # Start by putting them in a list
+    nums = [num1, num2, num3]
+    if nums[0] < nums[1]:
+        nums[0], nums[1] = nums[1], nums[0]
+    if nums[1] < nums[2]:
+        nums[1], nums[2] = nums[2], nums[1]
+    if nums[0] < nums[1]:
+        nums[0], nums[1] = nums[1], nums[0]
+
+    return nums
+
+
+
+
+
 #9
 #Write a function that takes a list called cards, counts the number, and returns it from the list of
 #cards provided
@@ -127,10 +191,48 @@ def add_lists(lyst1,lyst2):
         new_list.append (lyst1[i] + lyst2[i])
     return new_list
 
+#12
+#Write a function that finds the largest even number in a list numbers. Return -1 if not found. You
+#may not use the built-in functions max (), min(), sort(), or sorted ()
+def largest_even(numbers):
+    largest = -1  
+    for num in numbers:
+        if num % 2 == 0:             
+            if num > largest:         
+                largest = num
+    return largest
+
+
+#15
+#To train for an upcoming marathon, Samuel goes on one long-distance run each Saturday. He wants
+#to track how often the number of miles he runs fall short of the previous Saturday. This is called a
+#lag day. Write a function that takes in a list of miles run every Saturday and returns Samuel’s total
+#number of lag days
+
+
+def lag_days(miles):
+    lag_count = 0
+    for i in range(1, len(miles)):
+        if miles[i] < miles[i - 1]:
+            lag_count += 1
+    return lag_count
+
 
 list1 = [1,2,3,4,5]
 list2 = [10,9,8,7,6]
 print(add_lists(list1,list2))
+
+#16
+#Create Youtube dislike and like buttons
+def like_or_dislike(events):
+    state = "nothing"  # start with no selection
+    for event in events:
+        if event == state:
+            state = "nothing"  # pressing same button undoes it
+        else:
+            state = event      # pressing other button switches state
+    return state
+
 
 #17
 #Write a function that takes two arguments, a list and an item. The function should return the indices
@@ -227,7 +329,7 @@ print(summation(1,6))
 
 # is length of s is different from the length of words , false
 #len(s) == len(words)
-'''
+
 def is_acronym(s, words):
     #if length of s is not != words > false
     if len(s) != len(words):
@@ -246,4 +348,3 @@ s = 'abc'
 words = ['alice', 'bob', 'Charlie']
 
 print(f'{is_acronym(s, words)}')
-    '''

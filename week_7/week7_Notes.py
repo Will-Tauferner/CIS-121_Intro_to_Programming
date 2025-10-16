@@ -39,6 +39,10 @@ var1 = add_three(var0)
 
 print(add_three)
 
+#once the function is completed(returns) the local namespacee is destoryed.  This is done through a process called garbage collection.
+#Basically, all of the red stuff in the picture above is removed.
+
+
 
 
 
