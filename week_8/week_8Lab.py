@@ -96,6 +96,17 @@ def find_relation(name):
         return 'nothing'
 print(find_relation('Darth Vader'))
 
+#6
+def hailstone(n=10):   # default start value is 10
+    while n != 1:
+        print(n, end=" ")
+        if n % 2 == 0:
+            n = n // 2
+        else:
+            n = 3 * n + 1
+    print(1)   # print the final 1
+
+
 #7
 #Write a function that takes 3 numbers as arguments, num 1 (first number), num 2 (second number),
 #and num 3 (third number). num 1 should be mandatory. If no arguments are provided for num 2 or
@@ -193,9 +204,8 @@ def report_vowels(text):
         if is_vowel(ch):
             vowels.append(ch)
     return vowels
-
-           # True
-print(report_vowels('apple'))  # ['a', 'e']
+ 
+print(report_vowels('apple')) 
 
 #14. 
 def is_two_digit_number(num):

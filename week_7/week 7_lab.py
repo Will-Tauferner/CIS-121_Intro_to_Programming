@@ -1,3 +1,4 @@
+'''
 #1
 #An isogram is a word that has no duplicate letters. Write a function that takes a string word and
 #returns either True or False depending on whether or not it’s an isogram.
@@ -54,6 +55,8 @@ def two_unique_numbers(numbers):
 #4
 #Write a function that takes a dictionary called names of tech ids and student names as key-value
 #pairs, and returns a list containing just the student names
+'''
+'''
 def get_names(my_dict):
     names = []
 
@@ -63,9 +66,17 @@ def get_names(my_dict):
         names.append(my_dict[key]) 
 
     return names
-
 names_dict = {'12345': 'Will', '56473': ''}
 print(get_names(names_dict))
+'''
+def get_names(student_techid_name_dict):
+    names = []
+    for techid in student_techid_name_dict:
+        print('value',student_techid_name_dict[techid])
+        names.append(student_techid_name_dict[techid])
+    return names
+
+my_dict = {'12434': 'Will', '56437': 'Steve'}
 
 #5
 #Write a function that takes a dictionary, called people, containing the names and ages of a group of
@@ -214,3 +225,39 @@ sales = {
 }
 
 print(total_units_sold(sales))
+
+x = 3
+y = 7
+
+# Your code here
+temp = x
+x = y
+y = temp
+
+print("x =", x)
+print("y =", y)
+
+temp = x
+x = y
+y = temp
+print('x =',x)
+print('y =',y)
+# Ask for user input
+first_name = input("Enter your first name: ")
+last_name = input("Enter your last name: ")
+
+# Output a greeting
+print("Hello, " + first_name + " " + last_name + "! Welcome!")
+
+
+# Ask for user input
+color = input("Enter your favorite color: ")
+animal = input("Enter your favorite animal: ")
+
+# Output their pick using an f-string
+print(f"Your favorite combination is a {color} {animal}!")
+
+
+
+
+

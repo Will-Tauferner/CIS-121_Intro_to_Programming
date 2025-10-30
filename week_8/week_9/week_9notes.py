@@ -24,12 +24,13 @@ class Classname:
 #2. radius
 #3. mass
 #4. distance
-'''
+
 class Planet:
     def __init__(self, _name):
         self.name = _nameplanet1 = 
 planet1 = Planet('x25')
-'''
+
+
 #Lets see an example of a dog class that has a 
 #1name
 #2 age 
