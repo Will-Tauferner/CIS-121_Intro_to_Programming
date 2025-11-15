@@ -1,4 +1,8 @@
-#Adventure Game
+#William Tauferner
+#Seth Johnson
+#Mark Munetsi
+
+#Adventure Game CIS 121 Final Project
 
 #####Character Creation#####
 
