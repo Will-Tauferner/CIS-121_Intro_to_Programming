@@ -36,7 +36,9 @@ class DogPark:
                 dog.speak()
     def call_dog(self, dog_name):
         '''This calls the dog and removes it from the park'''
-    
+        for dog in self.dogs:
+            if dog.get_name() == dog_name:
+                self.dogs.remove(Dog)
 
 
 park1 = DogPark('Bark Zone')
