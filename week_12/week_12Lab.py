@@ -21,7 +21,8 @@ class Point:
     def __eq__(self, other):
         return self.x == other.x and self.y == other.y
     def distance(self, other):
-        return ((self.x - other.x) **2 + (self.y - other.y) **2) **1/2
+        return ((sel
+                 f.x - other.x) **2 + (self.y - other.y) **2) **1/2
     def __str__(self):
         return f'the point is {self.x},{self.y}'
     
@@ -30,7 +31,13 @@ p2 = Point(3,4)
 print(p1)
 print(p2)
 print(p1 == p2)
-
+#3
+class LinearEquation:
+    def __init__(self,m,b):
+        self.m = m
+        self.b = b
+    def add(self, other):
+        
 
 
 
