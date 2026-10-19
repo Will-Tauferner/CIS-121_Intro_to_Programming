@@ -21,7 +21,7 @@ jobs:
         run: python -m pip install pyinstaller
 
       - name: Build Mac game
-        run: python -m PyInstaller --onefile Final_project_Adventure_game.py
+        run: python -m PyInstaller --onefile CIS_Final_Project/Final_project_Adventure_game.py
 
       - name: Upload Mac game
         uses: actions/upload-artifact@v4
